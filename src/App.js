@@ -1,12 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import  {BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello from robert :) </h1>
-      <button className="btn btn-primary">SUBMIT</button>
-    </div>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
