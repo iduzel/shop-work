@@ -1,0 +1,46 @@
+.card-details {
+  display: flex;
+  width: 1200px;
+  height: 100vh;
+  margin: 1rem auto;
+}
+
+.left,
+.right {
+  min-width: 50%;
+  height: 100vh;
+}
+
+.img {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+.price {
+    color: blue;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.category {
+    color:#358dfd;
+}
+
+.line {
+    border-bottom: 2px solid lightgrey;
+}
+
+.description {
+   letter-spacing:0.1rem 
+}
