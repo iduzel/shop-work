@@ -1,0 +1,16 @@
+.products{
+    
+
+}    
+.products-wrapper{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        
+    }
+.products-wrapper> div{
+    margin-bottom: 1em;
+}
+.products-card{
+    margin-bottom: 1em;
+}

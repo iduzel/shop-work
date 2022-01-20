@@ -13,6 +13,8 @@ const Home = () => {
       <h3> email = {email}</h3>
 
     <Link to="/login">Login form</Link>
+    <br/>
+    <Link to="/products">Display products</Link>
 
   </div>;
 };

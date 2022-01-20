@@ -8,6 +8,7 @@ import Demo from './Demo';
 import { useEffect, useState } from 'react';
 import DataContext from './redux/dataContext.js';
 import axios from 'axios'
+import Products from './pages/Products';
 
 function App() {
   const [data,setData] = useState({})
@@ -30,7 +31,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/demo" element={<Demo />} />
-
+        <Route path="/products" element={<Products />} />
         <Route path="*" element={<NotFound />} />
         
       </Routes>
