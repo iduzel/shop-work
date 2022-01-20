@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import DataContext from './redux/dataContext.js';
 import axios from 'axios'
 import Products from './pages/Products';
+import CardDetails from './pages/CardDetails';
 
 function App() {
   const [data,setData] = useState({})
@@ -32,6 +33,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/details:id" element={<CardDetails />} />
         <Route path="*" element={<NotFound />} />
         
       </Routes>

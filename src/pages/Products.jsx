@@ -9,6 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import "./Products.css"
+import { Link } from 'react-router-dom';
 
 const Products = () => {
     const products = useContext(DataContext)
@@ -21,8 +22,9 @@ const Products = () => {
 
 <Card className="products-card" key={item.id} sx={{ maxWidth: 345 }}>
       <CardMedia
+        
         component="img"
-        height="140"
+        height="320"
         image={item.image}
         alt={item.title}
       />
@@ -35,8 +37,8 @@ const Products = () => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        
+       <Link to={`/details/${item.id}`}> <Button size="small">Read More</Button></Link>
       </CardActions>
     </Card>
 
