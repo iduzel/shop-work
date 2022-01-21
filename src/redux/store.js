@@ -6,6 +6,6 @@ import demoReducer from './demoSlice'
 export const store = configureStore({
     reducer:{
         user: userReducer,
-        demo:demoReducer
+        demo:demoReducer,
     },
 })
