@@ -23,12 +23,12 @@ const Products = () => {
         // category!==null && setCategory([...new Set(category)])
         console.log(currentCategory)
     },[currentCategory])
-    useEffect(()=>{
-        let tmp = category;
-        tmp.push("all");
-        setCategory(tmp);
-        console.log(category)
-    },[category])
+    // useEffect(()=>{
+    //     let tmp = category;
+    //     tmp.push("all");
+    //     setCategory(tmp);
+    //     console.log(category)
+    // },[category])
   return <div className="products">
       <h1>hello from products</h1>
       <Box sx={{ minWidth: 120 }}>
@@ -38,14 +38,16 @@ const Products = () => {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={currentCategory}
+          // defaultValue={"all"}
           label="Category"
           onChange={(e)=> setCurrentCategory(e.target.value)}
         >
             {
                category!==null && [... new Set(category)].map((item,index)=>(
-                    <MenuItem key={index} value={item}>{item}</MenuItem>
+                    <MenuItem selected={true} key={index} value={item}>{item}</MenuItem>
                 ))
             }
+            <MenuItem key={-1} value={'all'}>{"all"}</MenuItem>
           {/* <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem> */}
@@ -55,7 +57,7 @@ const Products = () => {
       <div className="products-wrapper">
 
             {
-        products?.data?.filter( item => (item.category === 'all'|| item.category === '')?item: item.category === currentCategory).map((item)=>(
+       products?.data?.map((item)=>(
 
 <Card className="products-card" key={item.id} sx={{ maxWidth: 345 }}>
       <CardMedia

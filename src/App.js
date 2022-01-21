@@ -10,6 +10,7 @@ import DataContext from './redux/dataContext.js';
 import axios from 'axios'
 import Products from './pages/Products';
 import CardDetails from './pages/CardDetails';
+import NavMenuComp from './components/NavMenuComp/NavMenuComp';
 
 function App() {
   const [data,setData] = useState({})
@@ -26,6 +27,8 @@ function App() {
   },[])
 
   return (
+    <>
+    <NavMenuComp/>
     <DataContext.Provider value={data}>
     <BrowserRouter>
       <Routes>
@@ -39,6 +42,7 @@ function App() {
       </Routes>
     </BrowserRouter>
     </DataContext.Provider>
+    </>
   );
 }
 
