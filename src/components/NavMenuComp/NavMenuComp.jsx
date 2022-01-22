@@ -38,7 +38,7 @@ const NavMenuComp = () => {
           <NavDropdown.Item href="/login">Blog</NavDropdown.Item>
           <NavDropdown.Item href="/details/5">Simple Blog</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link href="#" >
+        <Nav.Link href="/contact" >
           Contact
         </Nav.Link>
       </Nav>

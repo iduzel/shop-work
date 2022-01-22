@@ -1,0 +1,30 @@
+.contact{
+    padding: 2em;
+    display:flex;
+    flex-direction:column;
+}
+.contact .contact-main{
+    display: flex;
+}
+.contact-main form{
+    flex:0.6;
+}
+.contact-main form .btn{
+    transition: all 0.5s ease-in-out;
+}
+
+.contact-main form .btn:hover{
+    background-color:red;
+}
+.contact-main .right-side{
+    flex:0.4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.contact-main .right-side ul li{
+    display:flex;
+}
+.contact-main .right-side ul li svg{
+    margin:0.5rem;
+}

@@ -11,6 +11,7 @@ import axios from 'axios'
 import Products from './pages/Products';
 import CardDetails from './pages/CardDetails';
 import NavMenuComp from './components/NavMenuComp/NavMenuComp';
+import Contact from './pages/Contact';
 
 function App() {
   const [data,setData] = useState({})
@@ -37,6 +38,7 @@ function App() {
         <Route path="/demo" element={<Demo />} />
         <Route path="/products" element={<Products />} />
         <Route path="/details/:id" element={<CardDetails />} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="*" element={<NotFound />} />
         
       </Routes>

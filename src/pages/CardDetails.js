@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
 import Demo from "../Demo";
 import DataContext from "../redux/dataContext";
 import './CardDetail.css';
