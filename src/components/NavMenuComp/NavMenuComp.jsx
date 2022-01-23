@@ -4,10 +4,11 @@ import { Avatar } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import {Button, Container, Form, FormControl, Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { logout, selectUsername } from '../../redux/userSlice';
 import './NavMenuComp.css'
 const NavMenuComp = (props) => {
-    const currentUser = useSelector(selectUsername)
+   const currentUser = useSelector(selectUsername)
     const dispatch = useDispatch();
   return (
 
@@ -24,6 +25,7 @@ const NavMenuComp = (props) => {
         <Nav.Link href="/">Home</Nav.Link>
         <NavDropdown title="Shop" id="shopScrollingDropdown">
           <NavDropdown.Item href="/products">Shop Category</NavDropdown.Item>
+            {/* <Link to="/products">ShopCategory</Link> */}
           <NavDropdown.Item href="/details/5">Product Details</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action5">

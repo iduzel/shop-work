@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-    <NavMenuComp username={user}/>
+    <NavMenuComp />
     <DataContext.Provider value={data}>
     <BrowserRouter>
       <Routes>

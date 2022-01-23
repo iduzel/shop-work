@@ -14,7 +14,7 @@ const Home = () => {
  
 
   return <div>
-    
+    {/* <NavMenuComp username ={user}/> */}
       <h1>home screen {user}</h1>
       <h3> email = {email}</h3>
 

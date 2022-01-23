@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { setPassword, setEmail, setUsername } from "../redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import NavMenuComp from "../components/NavMenuComp/NavMenuComp";
 const Login = () => {
   const [email1, setEmail1] = useState("");
   const [password1, setPassword1] = useState("");
@@ -24,6 +25,7 @@ const Login = () => {
 
   return (
     <div className="login">
+      
       <div className="container p-5">
         <div className="row align-items-center">
           <div className="grad p-3 col-lg-6 col-md-6">
