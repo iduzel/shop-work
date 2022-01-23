@@ -1,7 +1,9 @@
 .contact{
-    padding: 2em;
     display:flex;
     flex-direction:column;
+}
+.contact h2.title{
+    margin-left: 1em;
 }
 .contact .contact-main{
     display: flex;

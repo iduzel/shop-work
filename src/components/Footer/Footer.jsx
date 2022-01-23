@@ -22,7 +22,7 @@ function Footer() {
   }, []);
 
   return (
-    <div className="footer">
+    <div className="footer mt-5 pt-4">
       
 
       <div className="container footer-top">

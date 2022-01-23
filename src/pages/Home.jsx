@@ -13,7 +13,7 @@ const Home = () => {
 
  
 
-  return <div>
+  return <div className='home container-fluid'>
     {/* <NavMenuComp username ={user}/> */}
       <h1>home screen {user}</h1>
       <h3> email = {email}</h3>
@@ -21,7 +21,7 @@ const Home = () => {
     <Link to="/login">Login form</Link>
     <br/>
     <Link to="/products">Display products</Link>
-    <Footer />
+    
 
   </div>;
 };

@@ -14,6 +14,7 @@ import NavMenuComp from './components/NavMenuComp/NavMenuComp';
 import Contact from './pages/Contact';
 import { useSelector } from 'react-redux';
 import { selectUsername } from './redux/userSlice';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [data,setData] = useState({})
@@ -47,6 +48,7 @@ function App() {
       </Routes>
     </BrowserRouter>
     </DataContext.Provider>
+    <Footer />
     </>
   );
 }
