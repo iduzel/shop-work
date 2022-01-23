@@ -15,7 +15,7 @@ const Contact = () => {
         loading="lazy"
         allowFullScreen=""
       />
-      <h1>Get in Touch</h1>
+      <h2>Get in Touch</h2>
 
       <div className="contact-main">
         <Form>

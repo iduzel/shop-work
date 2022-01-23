@@ -1,0 +1,17 @@
+.login{
+
+}
+.login a.register{
+    transition: all 0.5s ease-in-out;
+}
+.login a.register:hover{
+    background: red;
+}
+.login a.login{
+    width: 80%;
+    margin: 0 auto;
+}
+.login .grad{
+    background: rgb(67,89,251);
+    background: linear-gradient(322deg, rgba(67,89,251,1) 0%, rgba(93,93,252,1) 11%, rgba(74,167,227,1) 63%, rgba(0,212,255,1) 100%);
+}

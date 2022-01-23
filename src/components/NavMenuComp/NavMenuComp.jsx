@@ -1,9 +1,14 @@
 
 
-import React from 'react';
+import { Avatar } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import {Button, Container, Form, FormControl, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUsername } from '../../redux/userSlice';
 import './NavMenuComp.css'
-const NavMenuComp = () => {
+const NavMenuComp = (props) => {
+    const currentUser = useSelector(selectUsername)
+    const dispatch = useDispatch();
   return (
 
 <Navbar bg="light" expand="lg" className="nav-menu-comp sticky-top">
@@ -42,15 +47,22 @@ const NavMenuComp = () => {
           Contact
         </Nav.Link>
       </Nav>
-      <Form className="d-flex">
+      <Form className="d-flex ">
         <FormControl
           type="search"
           placeholder="Search"
           className="me-2"
           aria-label="Search"
         />
-        <Button variant="outline-success">Search</Button>
+        <Button className="me-2" variant="outline-success">Search</Button>
       </Form>
+      
+      {
+        currentUser!==""?
+       (<a style={{textDecoration:"none"}} href="" onClick={dispatch(logout)}> <Avatar>{currentUser[0].toUpperCase()}</Avatar></a>)
+        :null
+      }
+      {/* <Avatar>{currentUser!==""?currentUser[0].toUpperCase():null}</Avatar> */}
     </Navbar.Collapse>
   </Container>
 </Navbar>)

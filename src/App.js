@@ -12,6 +12,8 @@ import Products from './pages/Products';
 import CardDetails from './pages/CardDetails';
 import NavMenuComp from './components/NavMenuComp/NavMenuComp';
 import Contact from './pages/Contact';
+import { useSelector } from 'react-redux';
+import { selectUsername } from './redux/userSlice';
 
 function App() {
   const [data,setData] = useState({})
@@ -23,13 +25,14 @@ function App() {
       setData(tmp)
     })
   }
+  const user = useSelector(selectUsername)
   useEffect(() => {
     fetchData();
   },[])
 
   return (
     <>
-    <NavMenuComp/>
+    <NavMenuComp username={user}/>
     <DataContext.Provider value={data}>
     <BrowserRouter>
       <Routes>

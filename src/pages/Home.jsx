@@ -1,14 +1,15 @@
 
 import React from 'react';
-import { selectEmail, selectUser } from '../redux/userSlice';
+import { selectEmail, selectPassword, selectUsername } from '../redux/userSlice';
 import {useSelector} from 'react-redux'
 import { Link } from 'react-router-dom';
 import NavMenuComp from '../components/NavMenuComp/NavMenuComp';
 import Footer from '../components/Footer/Footer';
 
 const Home = () => {
-    const user = useSelector(selectUser)
+    const password = useSelector(selectPassword)
     const email = useSelector(selectEmail)
+    const user = useSelector(selectUsername)
 
  
 
