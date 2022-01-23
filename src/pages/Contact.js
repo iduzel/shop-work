@@ -79,7 +79,7 @@ const Contact = () => {
           </ul>
         </div>
       </div>
-      <Footer />
+     
     </div>
    
   );

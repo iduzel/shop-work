@@ -96,7 +96,7 @@ const Products = () => {
           </Card>
         ))}
       </div>
-      <Footer />
+     
     </div>
   );
 };
