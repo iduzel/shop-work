@@ -5,6 +5,7 @@ import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import AttachEmailRoundedIcon from '@mui/icons-material/AttachEmailRounded';
 import Map from "../components/Map/Map";
 import "./Contact.css";
+import Footer from "../components/Footer/Footer.jsx";
 const Contact = () => {
   return (
     <div className="contact">
@@ -66,8 +67,11 @@ const Contact = () => {
           </ul>
         </div>
       </div>
+      <Footer />
     </div>
+   
   );
+  
 };
 
 export default Contact;

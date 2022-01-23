@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import {FaFacebookF, FaTwitter, FaInstagram} from 'react-icons/fa'
-
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 import "./Footer.css";
 
@@ -22,43 +21,44 @@ function Footer() {
   }, []);
 
   return (
-    <div className="footer">
-      
+    <div>
 
-      <div className="container footer-top">
-        <div className="footer-elements footer-category">
-          <h4>Category</h4>
-          <ul>
-            {categoryList?.map((item, i) => (
-              <li className="single-category" key={i}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="phantom"></div>
+      <div className="footer">
 
-        <div className="footer-elements footer-company">
-          <h4>Company</h4>
-          <ul>
-            <li>About</li>
-            <li>News</li>
-            <li>FAQ</li>
-            <li>Contact</li>
-          </ul>
-        </div>
+        <div className="container footer-top">
+          <div className="footer-elements footer-category">
+            <h4>Category</h4>
+            <ul>
+              {categoryList?.map((item, i) => (
+                <li className="single-category" key={i}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div className="footer-elements footer-address">
-          <h4>Address</h4>
-          <ul>
-            <li>200. Green block, NewYork</li>
-            <li>+1 163 987 02 56</li>
-            <li>contact@demo.com</li>
-          </ul>
-        </div>
+          <div className="footer-elements footer-company">
+            <h4>Company</h4>
+            <ul>
+              <li>About</li>
+              <li>News</li>
+              <li>FAQ</li>
+              <li>Contact</li>
+            </ul>
+          </div>
 
-        <div className="footer-elements footer-newsletter">
+          <div className="footer-elements footer-address">
+            <h4>Address</h4>
+            <ul>
+              <li>200. Green block, NewYork</li>
+              <li>+1 163 987 02 56</li>
+              <li>contact@demo.com</li>
+            </ul>
+          </div>
 
-          <h4>Newsletter</h4>         
+          <div className="footer-elements footer-newsletter">
+            <h4>Newsletter</h4>
             <div className="input-group mb-3">
               <input
                 type="email"
@@ -68,19 +68,32 @@ function Footer() {
                 aria-describedby="basic-addon2"
               />
               <button className="button btn btn-primary" id="basic-addon2">
-               Subscribe
+                Subscribe
               </button>
-
-              
             </div>
             <div className="social-media">
-                  <span><FaFacebookF className="sm"/></span>
-                  <span><FaTwitter className="sm"/></span>
-                  <span><FaInstagram className="sm"/></span>
-              </div>
-       
+              <span>
+                <FaFacebookF className="sm" />
+              </span>
+              <span>
+                <FaTwitter className="sm" />
+              </span>
+              <span>
+                <FaInstagram className="sm" />
+              </span>
+            </div>
+          </div>      
+
+
+
         </div>
+        <div className="footer-line container"></div>
+        <div className="footer-bottom container d-flex justify-content-center align-center">
+          <small>{`Copyright ${'\u00A9'} ${new Date().getFullYear()} All rights reserved | This template is made by RD`}</small>
+        </div>
+       
       </div>
+     
     </div>
   );
 }
