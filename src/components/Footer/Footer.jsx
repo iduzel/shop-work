@@ -21,7 +21,8 @@ function Footer() {
   }, []);
 
   return (
-    <div>
+    <div className="footer mt-5 pt-4">
+      
 
       <div className="phantom"></div>
       <div className="footer">

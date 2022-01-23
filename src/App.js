@@ -10,10 +10,11 @@ import DataContext from './redux/dataContext.js';
 import axios from 'axios'
 import Products from './pages/Products';
 import CardDetails from './pages/CardDetails';
-import NavMenuComp from './components/NavMenuComp/NavMenuComp';
+import NavMenuComp from './components/NavMenuComp/NavMenuComp.jsx';
 import Contact from './pages/Contact';
 import { useSelector } from 'react-redux';
 import { selectUsername } from './redux/userSlice';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [data,setData] = useState({})
@@ -32,9 +33,10 @@ function App() {
 
   return (
     <>
-    <NavMenuComp username={user}/>
+    
     <DataContext.Provider value={data}>
     <BrowserRouter>
+    <NavMenuComp />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login />} />
@@ -47,6 +49,7 @@ function App() {
       </Routes>
     </BrowserRouter>
     </DataContext.Provider>
+    <Footer />
     </>
   );
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
-import HomeIcon from '@mui/icons-material/Home'
-import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
-import AttachEmailRoundedIcon from '@mui/icons-material/AttachEmailRounded';
+import HomeIcon from "@mui/icons-material/Home";
+import PermPhoneMsgIcon from "@mui/icons-material/PermPhoneMsg";
+import AttachEmailRoundedIcon from "@mui/icons-material/AttachEmailRounded";
 import Map from "../components/Map/Map";
 import "./Contact.css";
-import Footer from "../components/Footer/Footer.jsx";
+import Footer from "../components/Footer/Footer";
 const Contact = () => {
   return (
     <div className="contact">
@@ -16,9 +16,9 @@ const Contact = () => {
         loading="lazy"
         allowFullScreen=""
       />
-      <h2>Get in Touch</h2>
+      <h2 className="title">Get in Touch</h2>
 
-      <div className="contact-main">
+      <div className="contact-main p-5">
         <Form>
           <Form.Group className="mb-5" controlId="exampleForm.ControlTextarea1">
             <Form.Control as="textarea" rows={5} placeholder="Enter Message" />
@@ -30,40 +30,52 @@ const Contact = () => {
             controlId="exampleForm.ControlInput1"
           >
             <Col className="" sm="6">
-              <Form.Control required type="text" placeholder="Enter your name" />
+              <Form.Control
+                required
+                type="text"
+                placeholder="Enter your name"
+              />
             </Col>
             <Col className="" sm="6">
-              <Form.Control required type="email" placeholder="Enter your email" />
+              <Form.Control
+                required
+                type="email"
+                placeholder="Enter your email"
+              />
             </Col>
           </Form.Group>
-          <Form.Control className="mb-5" type="text" placeholder="Enter Subject" />
+          <Form.Control
+            className="mb-5"
+            type="text"
+            placeholder="Enter Subject"
+          />
           <Button className="btn" variant="primary" type="submit">
-    SEND MESSAGE
-  </Button>
+            SEND MESSAGE
+          </Button>
         </Form>
         <div className="right-side">
           <ul>
-              <li className="mb-3">
-                  <HomeIcon fontSize="large"/>
-                  <div>
-                      <strong>Buttonwood, Frankfurt am Main.</strong>
-                      <p>Rosemead, FRA 91770</p>
-                  </div>
-              </li>
-              <li className="mb-3">
-                  <PermPhoneMsgIcon  fontSize="large"/>
-                  <div>
-                      <strong>00 (440) 9865 562</strong>
-                      <p>Mon to Fri 9am to 6pm</p>
-                  </div>
-              </li>
-              <li className="mb-3">
-                  <AttachEmailRoundedIcon  fontSize="large"/>
-                  <div>
-                      <strong>support@bestshop.com.</strong>
-                      <p>Send us your query anytime</p>
-                  </div>
-              </li>
+            <li className="mb-3">
+              <HomeIcon fontSize="large" />
+              <div>
+                <strong>Buttonwood, Frankfurt am Main.</strong>
+                <p>Rosemead, FRA 91770</p>
+              </div>
+            </li>
+            <li className="mb-3">
+              <PermPhoneMsgIcon fontSize="large" />
+              <div>
+                <strong>00 (440) 9865 562</strong>
+                <p>Mon to Fri 9am to 6pm</p>
+              </div>
+            </li>
+            <li className="mb-3">
+              <AttachEmailRoundedIcon fontSize="large" />
+              <div>
+                <strong>support@bestshop.com.</strong>
+                <p>Send us your query anytime</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

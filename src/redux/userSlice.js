@@ -6,12 +6,23 @@ const initialValue = {
     password:"",
     username:""
 }
-
+const setUser =(username,email, password) =>{
+    if(sessionStorage.getItem(email)){
+       
+    }
+    else{
+         sessionStorage.setItem (email,{username:username,
+        email:email,
+    password:password})
+    }
+    
+}
 
 export const userSlice = createSlice({
     name: 'user',
     initialState: initialValue,
     reducers:{
+       
         setEmail: (state, action) =>{
             state.email = action.payload
         },
