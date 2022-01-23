@@ -3,7 +3,7 @@ import React from 'react';
 import { selectEmail, selectPassword, selectUsername } from '../redux/userSlice';
 import {useSelector} from 'react-redux'
 import { Link } from 'react-router-dom';
-import NavMenuComp from '../components/NavMenuComp/NavMenuComp';
+import NavMenuComp from '../components/NavMenuComp/NavMenuComp.jsx';
 import Footer from '../components/Footer/Footer';
 
 const Home = () => {

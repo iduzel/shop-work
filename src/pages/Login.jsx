@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setPassword, setEmail, setUsername } from "../redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import NavMenuComp from "../components/NavMenuComp/NavMenuComp";
+import NavMenuComp from "../components/NavMenuComp/NavMenuComp.jsx";
 const Login = () => {
   const [email1, setEmail1] = useState("");
   const [password1, setPassword1] = useState("");

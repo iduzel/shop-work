@@ -10,7 +10,7 @@ import DataContext from './redux/dataContext.js';
 import axios from 'axios'
 import Products from './pages/Products';
 import CardDetails from './pages/CardDetails';
-import NavMenuComp from './components/NavMenuComp/NavMenuComp';
+import NavMenuComp from './components/NavMenuComp/NavMenuComp.jsx';
 import Contact from './pages/Contact';
 import { useSelector } from 'react-redux';
 import { selectUsername } from './redux/userSlice';
@@ -33,9 +33,10 @@ function App() {
 
   return (
     <>
-    <NavMenuComp />
+    
     <DataContext.Provider value={data}>
     <BrowserRouter>
+    <NavMenuComp />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login />} />
