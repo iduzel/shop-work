@@ -17,15 +17,12 @@ function Footer() {
 
   useEffect(() => {
     getCategoryList();
-    console.log(categoryList);
+  
   }, []);
 
   return (
-    <div className="footer mt-5 pt-4">
-      
-
-      <div className="phantom"></div>
-      <div className="footer">
+    <div className="footer pt-5">
+     
 
         <div className="container footer-top">
           <div className="footer-elements footer-category">
@@ -93,7 +90,7 @@ function Footer() {
           <small>{`Copyright ${'\u00A9'} ${new Date().getFullYear()} All rights reserved | This template is made by RD`}</small>
         </div>
        
-      </div>
+ 
      
     </div>
   );

@@ -24,14 +24,14 @@ li:hover {
 }
 
 .footer {
+  display: inline-block;
     position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: black;
     color: white;  
-    height:300px;
-    
+    height:380px;    
 }
 
 .footer-elements {

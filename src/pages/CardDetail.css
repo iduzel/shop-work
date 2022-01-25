@@ -5,20 +5,36 @@
   margin: 1rem auto;
 }
 
-.left,
-.right {
+.card-details .left,
+.card-details.right {
   min-width: 50%;
   height: 100vh;
 }
+.card-details .left {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.img {
-  width: 400px;
+ 
+}
+.left .buttom-images {
+  display: flex;
+}
+
+
+
+
+.card-details .img {
+  width: 80%;
   height: 600px;
   display: flex;
   justify-content: center;
+  border: 1px solid lightgrey;
+  background-color:#EBEAEC;
 }
 
-.text {
+.card-details .text {
   display: flex;
   flex-direction: column;
 }
@@ -27,20 +43,101 @@
   font-weight: bolder;
 }
 
-.price {
-    color: blue;
-    font-size: 2rem;
-    font-weight: bolder;
+.card-details .price {
+  color: blue;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
-.category {
-    color:#358dfd;
+.card-details .card-details.category {
+  color: #358dfd;
 }
 
-.line {
-    border-bottom: 2px solid lightgrey;
+.card-details .line {
+  border-bottom: 2px solid lightgrey;
 }
 
-.description {
-   letter-spacing:0.1rem 
+.card-details .description {
+  letter-spacing: 0.1rem;
+}
+
+.card-details .buttons-number {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  width: 150px;
+  height: 50px;
+  border-radius: 70px;
+  border: 1px solid lightgrey;
+  margin-top:2rem;
+}
+
+.card-details .button {
+  border: none;
+  background-color: none;
+  color: gray;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-details .countNumber {
+  padding-top: 10px;
+  padding-left: 12px;
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+}
+.card-details .addToCart {
+  margin-top: 1.5rem;
+  
+  display: flex;
+  align-items: center;
+}
+.card-details .cart-btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 70px;
+}
+.card-details .heart {
+  margin-left: 2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 4px 2px rgba(230, 218, 218, 0.73);
+  
+}
+
+.card-details .heart-icon {
+  width: 20px;
+  height: 20px;
+  font-weight:light;
+
+}
+
+.card-details .countNumber {
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.card-details .fb {
+  background-color: #3B5998;
+  color: #fff;
+}
+.card-details .tw {
+  background-color: #55ACEE;
+  color: #fff;
+}
+.card-details .in {
+  background-color: #0077B5;
+  color: #fff;
 }
