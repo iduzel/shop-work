@@ -30,6 +30,41 @@ function Demo() {
 
      <input type="number" onChange={(e) => dispatch(setCounter(Number(e.target.value)))}/>
       <h4>INPUT : {inp}</h4>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>lorem ipsum dolor sit amet, consectetur</p>
+      <p>TEST</p>
+
   </div>;
 }
 

@@ -1,36 +1,78 @@
-.home {   
-    height: 100vh;   
+.home {
 }
 
 .home .body-part {
-    width: 100%;
-    height: 80%;
-    background-color: #DCE4E7;
-    position: relative;
-    background-image: url(https://images.unsplash.com/photo-1559563458-527698bf5295?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  height: 800px;
+  background-color: #dce4e7;
+  position: relative;
+  background-image: url(https://images.unsplash.com/photo-1559563458-527698bf5295?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .home .body-part-text {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin-left:2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-left: 2rem;
 }
 
 .home .title {
-    font-size:8rem;
-    font-weight: bolder;
+  font-size: 8rem;
+  font-weight: bolder;
 }
 
 .home .btn {
-    width:12rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 12rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** 5 IMAGES*/
+
+.home .five-images {
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.five-images .five-img {
+  width: 19%;
+  height: 100%;
+}
+.five-img img {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/** FREE SHIPPING */
+.home .shipping {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-around;
+
+  margin: 2rem auto;
+}
+.shipping .ship {
+  margin: 1rem;
+}
+.home .icon {
+  font-size: 2.5rem;
+  color: #2879fe;
+  font-weight: normal;
+}
+.shipping p {
+  word-wrap: nowrap;
+  font-weight: 300;
 }
