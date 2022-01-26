@@ -16,25 +16,16 @@ export const cartSlice= createSlice({
     reducers:{
         setProducts: (state, action)=>{
             state.products = action.payload;
+            console.log('added products')
         },
+       
         add2Cart: (state, action)=>{
+            
             Object.keys(state.cartContainer).includes(action.payload.id)?
                 state.cartContainer[action.payload.id] +=
                 parseInt(action.payload.quantity)
-                
                 :
                 state.cartContainer[action.payload.id] =parseInt(action.payload.quantity)
-            // let tmp = action.payload;
-            // let prodExist =state.data.filter(item => item.id === tmp.id)
-            // if(prodExist.length>0){
-            //     let inCart =state.cartContainer.filter(i => i.id === tmp.id)
-            //     if(inCart.length>0){
-            //         inCart[0].quantity+=tmp.quantity;
-            //     }
-            //     else{
-            //         state.cartContainer.push(tmp)
-            //     }
-            // }
         }
     }
 

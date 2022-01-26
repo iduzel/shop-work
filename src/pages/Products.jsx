@@ -11,8 +11,11 @@ import {
   Select,
   Typography,
 } from "@mui/material";
+
 import React, { useContext, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { setProducts } from "../redux/cartSlice";
 import DataContext from "../redux/dataContext";
 import "./Products.css";
 
@@ -21,6 +24,8 @@ const Products = () => {
   const [items, setItems] = useState(null);
   const [categories, setCategories] = useState(null);
   const [currentCategory, setCurrentCategory] = useState("all");
+  const dispatch = useDispatch();
+  
 
   const fetchCategories = (data) => {
     let tmp = [...new Set(data?.map((el) => el.category))];
@@ -36,10 +41,13 @@ const Products = () => {
 
   useEffect(() => {
     setItems(data?.data);
+
+
   });
 
   useEffect(() => {
     fetchCategories(data?.data);
+    dispatch(setProducts(data?.data))
   }, [items]);
 
   useEffect(() => {}, [currentCategory]);
@@ -87,9 +95,10 @@ const Products = () => {
               </Typography>
             </CardContent>
             <CardActions>
+              
               <Link to={`/details/${item.id}`}>
              
-                <Button size="small">Read More</Button>
+                Read More
               </Link>
             </CardActions>
           </Card>

@@ -48,16 +48,7 @@ const CartComp = () => {
         </div>
 
 
-      <ul classNam="m-5 p-5">
-
-          {Object.keys(cart).map(item =>(
-              <li key={item}><p><strong>{item}</strong> - {cart[item]} pcs </p></li>
-             ))}
-      </ul>
-        
-      {/* <p>
-          {JSON.stringify(data)}
-      </p> */}
+      
   </div>;
 };
 

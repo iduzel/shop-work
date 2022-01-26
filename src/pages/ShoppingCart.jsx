@@ -12,11 +12,9 @@ const ShoppingCart = () => {
     const dispatch = useDispatch();
     const tmp = useSelector(selectProducts)
     const username = useSelector(selectUsername)
-    useEffect(()=>{
-        dispatch(setProducts(data.data))
-    },[])
+ 
   return <div className='shopping-cart'>
-      <h2 className="m-5">{username}'s Cart</h2>
+      <h2 className="m-5">{username==""? 'Noname':username}'s Cart</h2>
       <CartComp />
       
   </div>;

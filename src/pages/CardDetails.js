@@ -15,27 +15,23 @@ function CardDetails(params) {
   const { id } = useParams();
   const dispatch =  useDispatch();
   const cardContext = useContext(DataContext);
-  const [qty, setQty] = useState(1);
+  const [count, setCount] = useState(1);
   const [currentItem, setCurrentItem] = useState(cardContext?.data?.filter((item) => item.id.toString() === id));
   
- const add2CartClick= () =>{
-    dispatch(add2Cart({id:id, quantity:qty}))
+
+ const addClick= () =>{
+     dispatch(add2Cart({id:id, quantity:count}))
+    //dispatch(put2Cart({id:id, quantity:count}))
  }
-  const [count, setCount] = useState(1);
 
 
-  console.log(JSON.stringify(currentItem));
 
   return (
     <div className="card-details container">
       <div className="left">
-        <img className="img" src={currentItem[0].image} />
+        <img className="img" alt="" src={currentItem[0].image} />
         <div className="bottom-images">
-           
 
-            
-
-            
         </div>
       </div>
 
@@ -46,7 +42,8 @@ function CardDetails(params) {
         <p>Availability: In Stock</p>
         <p className="line"></p>
         <p className="description">{currentItem[0].description}</p>
-        <div className="buttons-number">
+        
+         <div className="buttons-number">
           <span onClick={() => (count >1 && count <= 10)? setCount(count - 1):setCount(count)} className="button">
             {<AiOutlineMinus />}
           </span>
@@ -55,9 +52,9 @@ function CardDetails(params) {
           <span onClick={() => (count >=1 && count < 10)? setCount(count + 1):setCount(count)} className="button">
             {<AiOutlinePlus />}
           </span>
-        </div>
+        </div> 
         <div className="addToCart mt-5 mb-5">
-          <button onClick={add2CartClick({id:id, quantity:count})} className="cart-btn btn btn-primary">ADD TO CART</button>
+          <button onClick={()=>addClick({id:id, quantity:count})} className="cart-btn btn btn-primary">ADD TO CART</button>
           <div className="heart">
             {<AiOutlineHeart className="heart-icon" />}
           </div>

@@ -11,7 +11,7 @@ import Products from "./pages/Products";
 import CardDetails from "./pages/CardDetails";
 import NavMenuComp from "./components/NavMenuComp/NavMenuComp.jsx";
 import Contact from "./pages/Contact";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectUsername } from "./redux/userSlice";
 import Footer from "./components/Footer/Footer";
 import Tracking from './pages/Tracking';
@@ -20,7 +20,7 @@ import ShoppingCart from './pages/ShoppingCart';
 function App() {
   const [data, setData] = useState({});
   const fetchData = async () => {
-    let t = await axios
+     await axios
       .get("https://fakestoreapi.com/products/")
       .then((resp) => {
         let tmp = { ...data };
@@ -28,7 +28,6 @@ function App() {
         setData(tmp);
       });
   };
-  const user = useSelector(selectUsername);
   useEffect(() => {
     fetchData();
   }, []);

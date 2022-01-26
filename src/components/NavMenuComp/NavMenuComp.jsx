@@ -1,5 +1,5 @@
 import { Avatar } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Container,
@@ -18,13 +18,17 @@ import { selectCart } from "../../redux/cartSlice";
 
 const NavMenuComp = (props) => {
   const currentUser = useSelector(selectUsername);
-  const cart = useSelector(selectCart)
+  const userCart = useSelector(selectCart)
   const dispatch = useDispatch();
+  const [items,setItems] = useState(0)
+  useEffect(() => {
+    setItems(Object.keys(userCart).length)
+  },[userCart])
 
   return (
     <Navbar bg="light" expand="lg" className="nav-menu-comp sticky-top">
       <Container fluid className="nav-menu-container">
-        <Navbar.Brand href="/" className="logo-title">
+        <Navbar.Brand as={NavLink} to="/" className="logo-title">
           <strong>Best Shop</strong>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -77,11 +81,7 @@ const NavMenuComp = (props) => {
 
           <div className="cart-number">
             <BsCart3 className="cart-icon" />
-        <div className="number">{
-        
-          Object.values(cart).length
-        
-       }</div>
+        <div className="number">{ items}</div>
           </div>
 
           {/* form- avatar part */}
