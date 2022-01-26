@@ -1,10 +1,11 @@
-.login{
-
+.login .login{
+    transition:  all 0.5s ease-in-out;
 }
+
 .login a.register{
     transition: all 0.5s ease-in-out;
 }
-.login a.register:hover{
+.login a.register:hover, .login .login:hover{
     background: red;
 }
 .login a.login{

@@ -2,7 +2,7 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setPassword, setEmail, setUsername } from "../redux/userSlice";
+import { setPassword, setEmail, setUsername, setUser } from "../redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import NavMenuComp from "../components/NavMenuComp/NavMenuComp.jsx";
@@ -11,15 +11,17 @@ const Login = () => {
   const [email1, setEmail1] = useState("");
   const [password1, setPassword1] = useState("");
   const [username1, setUsername1]= useState("");
+  const [remember1,setRemember1] = useState(false)
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleClick = (e) => {
     e.preventDefault();
     
-    dispatch(setEmail(email1));
-    dispatch(setPassword(password1));
-    dispatch(setUsername(username1))
+    // dispatch(setEmail(email1));
+    // dispatch(setPassword(password1));
+    // dispatch(setUsername(username1))
+    dispatch(setUser({name:username1, password:password1, email:email1}))
 
     navigate("/");
   };

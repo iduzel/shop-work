@@ -15,6 +15,8 @@ import Contact from './pages/Contact';
 import { useSelector } from 'react-redux';
 import { selectUsername } from './redux/userSlice';
 import Footer from './components/Footer/Footer';
+import Tracking from './pages/Tracking';
+import ShoppingCart from './pages/ShoppingCart';
 
 function App() {
   const [data,setData] = useState({})
@@ -44,6 +46,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/details/:id" element={<CardDetails />} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/tracking" element={<Tracking />} />
+        <Route path="/cart" element={<ShoppingCart />} />
         <Route path="*" element={<NotFound />} />
         
       </Routes>

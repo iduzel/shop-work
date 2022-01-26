@@ -64,3 +64,10 @@ justify-content: space-around;
     text-align: center;
     line-height: 1rem;
 }
+
+.nav-menu-comp .btn{
+    transition: all 0.5s ease-in-out;
+}
+.nav-menu-comp .btn:hover{
+    background-color:red;
+}

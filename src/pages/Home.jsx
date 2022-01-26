@@ -11,22 +11,20 @@ import Footer from "../components/Footer/Footer";
 import "./Home.css";
 
 const Home = () => {
-  const password = useSelector(selectPassword);
-  const email = useSelector(selectEmail);
-  const user = useSelector(selectUsername);
+ 
 
   return (
     <div className="home container-fluid">
       {/* <NavMenuComp username ={user}/> */}
 
-      <h3> email = {email}</h3>
+      {/* <h3> email = {email}</h3>
 
       <Link to="/login">Login form</Link>
-      <br />
+      <br /> */}
       <div className="row body-part">
         <div className="container body-part-text">
           <h4>Winter Fashion</h4>
-          <h1 className="title">Fashion Collection 2019</h1>
+          <h1 className="title">Fashion Collection 2022</h1>
           <Link className="btn btn-primary" to="/products">
             Shop Now
           </Link>

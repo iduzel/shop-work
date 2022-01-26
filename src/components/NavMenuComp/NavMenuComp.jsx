@@ -14,9 +14,11 @@ import { NavLink } from "react-router-dom";
 import { logout, selectUsername } from "../../redux/userSlice";
 import "./NavMenuComp.css";
 import { BsCart3 } from "react-icons/bs";
+import { selectCart } from "../../redux/cartSlice";
 
 const NavMenuComp = (props) => {
   const currentUser = useSelector(selectUsername);
+  const cart = useSelector(selectCart)
   const dispatch = useDispatch();
 
   return (
@@ -75,7 +77,11 @@ const NavMenuComp = (props) => {
 
           <div className="cart-number">
             <BsCart3 className="cart-icon" />
-            <div className="number">5</div>
+        <div className="number">{
+        
+          Object.values(cart).length
+        
+       }</div>
           </div>
 
           {/* form- avatar part */}
@@ -86,16 +92,17 @@ const NavMenuComp = (props) => {
               className="me-2"
               aria-label="Search"
             />
-            <Button className="me-2" variant="outline-success">
+            <button className="me-2 btn btn-primary">Search</button>
+            {/* <Button className="me-2" variant="outline-success">
               Search
-            </Button>
+            </Button> */}
           </Form>
 
           {currentUser !== "" ? (
-            <a
+            <a title="LOGOUT"
               style={{ textDecoration: "none" }}
               href=""
-              onClick={dispatch(logout)}
+              onClick={()=>dispatch(logout())}
             >
               {" "}
               <Avatar>{currentUser[0].toUpperCase()}</Avatar>
